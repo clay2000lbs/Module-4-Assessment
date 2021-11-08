@@ -3,10 +3,10 @@ const cors = require("cors");
 
 const app = express();
 
-
 app.use(cors());
-
 app.use(express.json()); // When we want to be able to accept JSON.
+
+//let nameForm = document.querySelector('#name-form')
 
 app.get("/api/compliment", (req, res) => {
   const compliments = ["Gee, you're a smart cookie!",
@@ -36,5 +36,17 @@ app.get("/api/fortunes", (req, res) => {
   res.status(200).send(randomFortune)
 
 })
+
+const {
+  createUser,
+  reformUser,
+  assimilateUser
+} = require('./controller')
+
+app.post(`/api/users`, createUser)
+app.put(`/api/users/:id`, reformUser)
+app.delete(`/api/users/:id`, assimilateUser)
+
+
 
 app.listen(4000, () => console.log("Server running on 4000"));

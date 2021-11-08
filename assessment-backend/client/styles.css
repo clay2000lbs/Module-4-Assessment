@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+}
+
+p {
+    color: blanchedalmond;
+}
+
+#red {
+    color: blanchedalmond;
+    background-color: red;
+    display: none;
+}
+
+#blue {
+    color: blanchedalmond;
+    background-color: blue;
+    display: none;
+}
+
+h1 {
+    color: blanchedalmond;
+}
+
+h2 {
+    color: blanchedalmond;
+}
+
