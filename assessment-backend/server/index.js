@@ -37,6 +37,21 @@ app.get("/api/fortunes", (req, res) => {
 
 })
 
+app.get("/api/fortunes", (req, res) => {
+  const fortunes  = [
+  "An inch of time is an inch of gold.",
+  "Everyday in your life is a special occasion.",
+  "Failure is the path of least persistence.",
+  "He who expects no gratitude shall never be disappointed.", 
+  "It is better to be an optimist and proven a fool than to be a pessimist and be proven right."]
+  
+  let randomIndex = Math.floor(Math.random() * fortunes.length)
+  let randomFortune = fortunes[randomIndex]
+  
+  res.status(200).send(randomFortune)
+
+})
+
 const {
   createUser,
   reformUser,
